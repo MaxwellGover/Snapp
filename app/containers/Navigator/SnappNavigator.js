@@ -8,6 +8,7 @@ export default class SnappNavigator extends Component {
 		isAuthed: PropTypes.bool.isRequired
 	}
 	renderScene = (route, navigator) => {
+		console.log(route)
 		if (this.props.isAuthed === false) {
 			return <Splash navigator={navigator} />
 		} else if (this.props.isAuthed === true && route.previewFront !== true) {
